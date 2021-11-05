@@ -28,6 +28,12 @@ class ConfluentPlatform < Formula
     bin.write_exec_script Dir["#{libexec}/bin/*"]
   end
 
+  def caveats
+    <<~EOS
+      Configuration files: #{pkgetc}
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/kafka-broker-api-versions --version")
 
