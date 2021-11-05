@@ -15,7 +15,7 @@ class ConfluentPlatform < Formula
   conflicts_with "kafka", because: "kafka also ships with identically named Kafka related executables"
 
   def install
-    pkgetc.install Dir["etc/*"]
+    pkgetc.install Dir["etc/**/*", "etc/*"]
     (buildpath/"etc").rmdir
     libexec.install_symlink pkgetc => "etc"
 
