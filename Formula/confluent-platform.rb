@@ -10,8 +10,6 @@ class ConfluentPlatform < Formula
     regex(/>Version (\d+(?:\.\d+)+)</i)
   end
 
-  bottle :unneeded
-
   depends_on "openjdk"
 
   conflicts_with "kafka", because: "kafka also ships with identically named Kafka related executables"
