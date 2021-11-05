@@ -15,8 +15,12 @@ class ConfluentPlatform < Formula
   conflicts_with "kafka", because: "kafka also ships with identically named Kafka related executables"
 
   def install
+    pkgetc.install Dir["etc/*"]
+
     libexec.install %w[bin etc libexec share]
     rm_rf libexec/"bin/windows"
+    rm_rf libexec/"etc"
+    libexec.install_symlink pkgetc => "etc"
 
     # Delete some lines to avoid the error like
     # "cd: ../Cellar/confluent-platform/5.5.0/bin/../share/java: No such file or directory"
