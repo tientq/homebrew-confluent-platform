@@ -16,7 +16,7 @@ class ConfluentPlatform < Formula
 
   def install
     pkgetc.install Dir["etc/*"]
-    (buildpath/"etc").rm_rf
+    rm_rf buildpath/"etc"
     libexec.install_symlink pkgetc => "etc"
 
     libexec.install %w[bin etc libexec share]
