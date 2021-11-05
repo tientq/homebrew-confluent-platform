@@ -17,9 +17,8 @@ class ConfluentPlatform < Formula
   def install
     pkgetc.install Dir["etc/*"]
 
-    libexec.install %w[bin etc libexec share]
+    libexec.install %w[bin libexec share]
     rm_rf libexec/"bin/windows"
-    rm_rf libexec/"etc"
     libexec.install_symlink pkgetc => "etc"
 
     # Delete some lines to avoid the error like
