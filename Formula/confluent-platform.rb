@@ -22,6 +22,10 @@ class ConfluentPlatform < Formula
     # "cd: ../Cellar/confluent-platform/5.5.0/bin/../share/java: No such file or directory"
     inreplace libexec/"bin/confluent-hub", "[ -L /usr/local/bin/confluent-hub ]", "false"
 
+    pkgetc.install Dir["#{libexec}/etc/*"]
+    (buildpath/"#{libexec}/etc").rmdir
+    libexec.install_symlink pkgetc => "etc"
+
     bin.write_exec_script Dir["#{libexec}/bin/*"]
   end
 
