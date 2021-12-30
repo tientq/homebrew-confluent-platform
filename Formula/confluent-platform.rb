@@ -1,9 +1,9 @@
 class ConfluentPlatform < Formula
   desc "Developer-optimized distribution of Apache Kafka"
   homepage "https://www.confluent.io/product/confluent-platform/"
-  url "http://packages.confluent.io/archive/7.0/confluent-7.0.0.tar.gz"
-  version "7.0.0"
-  sha256 "a762ff6702f8040aa8ed01d5130a0896a8933d56ec8b84ce786d0ecf230f9c3f"
+  url "http://packages.confluent.io/archive/7.0/confluent-7.0.1.tar.gz"
+  version "7.0.1"
+  sha256 "a9e67685f80cecae21bac69cdb6aaf2ec6774398ff80c93cdc41a9287aeafd5f"
 
   livecheck do
     url "https://docs.confluent.io/current/release-notes/changelog.html"
