@@ -3,7 +3,7 @@ class ConfluentPlatform < Formula
   homepage "https://www.confluent.io/product/confluent-platform/"
   url "http://packages.confluent.io/archive/7.0/confluent-7.0.1.tar.gz"
   version "7.0.1"
-  sha256 "a9e67685f80cecae21bac69cdb6aaf2ec6774398ff80c93cdc41a9287aeafd5f"
+  sha256 "434fc0ff7336b67e77d3ffa8d51a5c80db0f28542ae982509e1832b1196955f5"
 
   livecheck do
     url "https://docs.confluent.io/current/release-notes/changelog.html"
